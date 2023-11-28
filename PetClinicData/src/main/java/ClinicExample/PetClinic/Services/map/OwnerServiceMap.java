@@ -2,10 +2,11 @@ package ClinicExample.PetClinic.Services.map;
 
 import ClinicExample.PetClinic.Model.Owner;
 import ClinicExample.PetClinic.Services.CRUDservices;
+import ClinicExample.PetClinic.Services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CRUDservices<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 
     @Override
@@ -31,5 +32,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     @Override
     public void deleteByID(Long id) {
          super.deleteByID(id);
+    }
+
+    @Override
+    public Owner fidByLastName(String lastname) {
+        return null;
     }
 }
